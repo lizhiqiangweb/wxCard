@@ -1,0 +1,11 @@
+<view class='container'>
+  <view class='contact-item' data-url="../cardBox/index" bindtap="go" wx:for="{{contacts}}" wx:for-item="item" wx:key="index">
+    <view class='contact-left'>
+      <image data-url="../cardBox/index" bindtap="go" src='{{item.imgUrl}}'></image>
+    </view>
+    <view class='contact-right'>
+      <view data-url="../cardBox/index" bindtap="go">{{item.name}} | <text>{{item.post}}</text></view>
+      <view class='company' data-url="../cardBox/index" bindtap="go">{{item.company}}</view>
+    </view>
+  </view>
+</view>

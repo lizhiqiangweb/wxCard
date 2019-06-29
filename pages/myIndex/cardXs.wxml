@@ -1,0 +1,12 @@
+<view>
+  <view class="xs">
+    <view class="xsItem">
+      <image src="../images/bg.jpg"></image>
+      <view bindtap="selectBg">设为封面</view>
+    </view>
+    <view class="xsItem">
+      <image src="../images/bg.jpg"></image>
+      <view>设为封面</view>
+    </view>
+  </view>
+</view>

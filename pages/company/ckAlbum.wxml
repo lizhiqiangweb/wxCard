@@ -1,0 +1,25 @@
+<view>
+  <view class="albumName">
+    <label>相册名称：</label>
+    <input>我的相册1</input>
+  </view>
+  
+  <view class='imgList'>
+    <!-- 预览视频 -->
+    <block wx:for="{{pics}}" wx:for-item="image" wx:key='index'>
+      <view class="imgItem">
+        <image class="addImg" src="{{image}}" data-src="{{image}}" bindtap="previewImages"></image>
+        <view class="delete" bindtap="deleteImgs" data-index="{{index}}">X</view>
+      </view>
+    </block>
+    <!-- 上传图片btn -->
+    <view bindtap='chooseImages' class='albumItem'>
+      <view>+</view>
+      <label>上传照片</label>
+    </view>
+  </view>
+
+  <view class="add">
+    <button bindtap="go" data-url="companyEdit">保存</button>
+  </view>
+</view>

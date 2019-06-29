@@ -1,0 +1,28 @@
+/* pages/contacts/contacts.wxss */
+
+.contact-item {
+  display: flex;
+  background: #fff;
+  margin: 12rpx auto;
+  padding: 24rpx 0;
+  border-radius: 8rpx;
+  box-shadow: 1rpx 1rpx 10rpx -1rpx #999;
+}
+.contact-item image {
+  width: 144rpx;
+  height: 144rpx;
+  border-radius: 50%;
+  display: block;
+}
+.contact-right {
+  font-size: 18px;
+  margin: 18rpx 0 0 0;
+  font-weight: 500;
+}
+.contact-right text {
+  font-size: 12px;
+}
+.company {
+  font-size: 14px;
+  margin: 10rpx 0 0 0;
+}

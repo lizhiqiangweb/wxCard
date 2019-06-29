@@ -1,0 +1,12 @@
+<view>
+  <view class="addNew">
+    <view class="albumItem" wx:for="{{album}}" wx:for-item="item" wx:key="index">
+      <image bindtap="go" data-url='ckAlbum' src="{{item.imgUrl}}"></image>
+      <view class="albumName">{{item.name}}</view>
+    </view>
+    <view class="albumItem" bindtap="go" data-url='newAlbum'>
+      <view bindtap="go" data-url='newAlbum'>+</view>
+      <label bindtap="go" data-url='newAlbum'>新建相册</label>
+    </view>
+  </view>
+</view>

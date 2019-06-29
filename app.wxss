@@ -1,0 +1,11 @@
+/**app.wxss**/
+page {
+  background: rgba(244, 244, 244, .6);
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+text, label, view {
+  color: #333333;
+}

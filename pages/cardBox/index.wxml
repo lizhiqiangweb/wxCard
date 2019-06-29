@@ -1,0 +1,57 @@
+<view class=''>
+<!-- 个人简介 -->
+  <view class='myMsg'>
+    <view class='msgTop'>
+      <view class='cardAccess'>
+        <text>{{access}}</text>
+        <view>名片访问量</view>
+      </view>
+      <image src='{{headUrl}}'></image>
+      <view class='cardCollection'>
+        <text>{{collections}}</text>
+        <view>被收藏次数</view>
+      </view>
+    </view>
+
+    <view class='msgBottom'>
+      <view class='msgBottomName'>陈芸熙 |
+        <label>网页设计</label>
+        <text>123456789</text>
+      </view>
+      <view class='msgBottomItem' wx:for="{{myMsg}}" wx:for-item='item' wx:key='index'>
+        <label>{{item.name}}</label><text>{{item.content}}</text>
+      </view>
+      <view class='msgBtn'>
+        <label>编辑</label>
+        <label>分享ta</label>
+      </view>
+    </view>    
+  </view>
+  <view class='clear'></view>
+  <!-- 公司简介 -->
+  <view class='companyDis'>
+    <label class='tit'>公司简介：</label>
+    <text class='companyContent'>{{companyDisContent}}</text>
+  </view>
+
+  <!-- 相册 -->
+  <view class='companyDis album'>
+    <label class='tit'>相册：</label>
+    <view class='imgItem'>
+      <image wx:for='{{imgItem}}' wx:for-item="item" wx:key="index" src='{{item.imgUrl}}' class="{{item.imgUrl.index==3 ? 'height3' : 'height2'}}"></image>
+    </view>
+  </view>
+
+  <!-- 底部 -->
+  <view class="bottom">
+    <view class="btn1 btn">
+      <image bindtap="go" data-url="../company/company" src="../images/taCompany_icon.png"></image>
+      <text bindtap="go" data-url="../company/company">我的公司</text>
+    </view>
+    <view class="btn2 btn">
+      <image bindtap="go" data-url="../company/album" src="../images/myImglist_icon.png"></image>
+      <text bindtap="go" data-url="../company/album">我的相册</text>
+    </view>
+  </view>
+
+</view>

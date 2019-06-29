@@ -1,0 +1,28 @@
+/* pages/myindex/myindex.wxss */
+@import "../myCard/mycard.wxss";
+.container {
+  background: #fff;
+  border-radius: 8rpx;
+  padding: 1rpx 12rpx 44rpx;
+  margin-top: -18rpx;
+}
+.btn-item {
+  width: 600rpx;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 14px auto 0;
+}
+.btn-item view {
+  display: flex;
+  flex-direction: column;
+}
+.btn-item image {
+  width: 48rpx;
+  height: 48rpx;
+  padding: 34rpx 76rpx;
+}
+.btn-item view text {
+  font-size: 14px;
+  text-align: center;
+  margin-top: -18rpx;
+}

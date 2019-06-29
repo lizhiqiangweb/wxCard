@@ -1,0 +1,27 @@
+/* pages/myIndex/cardXs.wxss */
+.xs {
+  display: flex;
+  width: 96%;
+  flex-wrap: wrap;
+  padding: 0 24rpx;
+}
+.xsItem {
+  width: 326rpx;
+  margin: 18rpx 12rpx;
+}
+.xsItem image {
+  height: 480rpx;
+  width: 326rpx;
+}
+.xsItem view {
+  text-align: center;
+  font-size: 14px;
+  width: 200rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+  display: block;
+  background: #169bd5;
+  margin: 0 auto;
+  color: #fff;
+  border-radius: 8rpx;
+}

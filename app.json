@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/myCard/mycard",
+    "pages/contacts/contacts",
+    "pages/myIndex/myindex",
+    "pages/cardBox/index",
+    "pages/company/company",
+    "pages/company/companyEdit",
+    "pages/company/album",
+    "pages/company/newAlbum",
+    "pages/company/ckAlbum",
+    "pages/myIndex/flow",
+    "pages/myIndex/cardXs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "selectedColor": "#0b85ce",
+    "list": [{
+      "pagePath": "pages/myCard/mycard",
+      "text": "我的名片",
+      "iconPath": "pages/images/myCard_icon.png",
+      "selectedIconPath": "pages/images/myCard_icon.png"
+    },
+    {
+      "pagePath": "pages/contacts/contacts",
+      "text": "通讯录",
+      "iconPath": "pages/images/phones_icon.png",
+      "selectedIconPath": "pages/images/phones_icon.png"
+    },
+    {
+      "pagePath": "pages/myIndex/myindex",
+      "text": "个人中心",
+      "iconPath": "pages/images/home_icon.png",
+      "selectedIconPath": "pages/images/home_icon.png"
+    }]
+  }
+}

@@ -1,0 +1,32 @@
+/* pages/company/album.wxss */
+.addNew {
+  display: flex;
+  flex-wrap: wrap;
+  width: 92%;
+  margin: 0 auto;
+}
+.albumItem {
+  width: 300rpx;
+  border: 1px solid #ddd;
+  text-align: center;
+  height: 260rpx;
+  margin: 36rpx 20rpx 32rpx;
+  background: #fff;
+  box-shadow: 1rpx 1rpx 8rpx -1rpx #ddd;
+}
+.albumItem view {
+  font-size: 32px;
+  margin: 56rpx 0 0 0;
+}
+.albumItem label {
+  font-size: 14px;
+}
+.albumItem image {
+  width: 300rpx;
+  height: 260rpx;
+}
+.albumName {
+  font-size: 14px !important;
+  margin: 0 auto !important;
+  color: #666;
+}

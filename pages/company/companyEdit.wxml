@@ -1,0 +1,54 @@
+<form>
+  <view class="edit">
+    <view class="editItem">企业名称：
+      <input></input>
+    </view>
+    <view class="editItem">企业简称：
+      <input></input>
+    </view>
+    <view class="editItem">企业官网：
+      <input></input>
+    </view>
+    <view class="editItem1">企业介绍：
+      <textarea bindinput="textareaCount" maxlength="220"></textarea>
+      <view>{{textareaCount}} /
+        <text>220</text>
+      </view>
+    </view>
+    <!-- logo -->
+    <view class="editItem2">企业logo：<text>{{imgCount}} / 1</text>
+      <view class='imgList'>
+        <!-- 预览图片 -->
+        <view hidden="{{isShow == true ? 'true' : ''}}">
+          <image class="addImg" src="{{imgSrc}}" bindtap="previewImage"></image>
+          <view class="delete" bindtap="deleteImg" data-index="{{index}}">X</view>
+        </view>
+        <!-- 上传图片btn -->
+        <view wx:if="{{isShow}}" bindtap='chooseImage' class='add-img'>
+          <text>+</text>
+        </view>
+      </view>
+    </view>
+    <!-- 照片 -->
+    <view class="editItem3">照片：<text>{{imgCounts}} / 9</text>
+      <view class='imgList'>
+        <!-- 预览视频 -->
+        <block wx:for="{{pics}}" wx:for-item="image" wx:key='index'>
+          <view class="">
+            <image class="addImg" src="{{image}}" data-src="{{image}}" bindtap="previewImages"></image>
+            <view class="delete" bindtap="deleteImgs" data-index="{{index}}">X</view>
+          </view>
+        </block>
+        <!-- 上传图片btn -->
+        <view wx:if="{{isShows}}" bindtap='chooseImages' class='add-img'>
+          <text>+</text>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+  <view class="add">
+    <button type="submit">保存</button>
+  </view>
+</form>

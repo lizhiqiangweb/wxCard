@@ -1,0 +1,26 @@
+<view class='container'>
+<!-- 个人简介 -->
+  <view class='myMsg'>
+    <view class='msgTop'>
+      <view class='cardAccess'>
+        <text>{{access}}</text>
+        <view>名片访问量</view>
+      </view>
+      <image src='{{headUrl}}'></image>
+      <view class='cardCollection'>
+        <text>{{collections}}</text>
+        <view>被收藏次数</view>
+      </view>
+    </view>
+  </view>
+
+  <view class='btnsIcon'>
+    <view class='btn-item'>
+      <view wx:for="{{btnsIcon}}" wx:for-item="item" wx:key="index">
+        <image bindtap="go" data-url="{{item.url}}" data-index="{{item.type}}" src='{{item.iconUrl}}'></image>
+        <text>{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+
+</view>

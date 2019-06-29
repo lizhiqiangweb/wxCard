@@ -1,0 +1,13 @@
+<view>
+<!-- item -->
+  <view class="companyItem" wx:for="{{companyItem}}" wx:for-item="item" wx:key="index" >
+    <image class="logo" src="{{item.logo}}"></image>
+    <text>{{item.name}}</text>
+    <image src="../images/edit_icon.png" bindtap="go" data-url="companyEdit" class="edit"></image>
+  </view>
+
+<!-- add -->
+  <view class="add">
+    <button bindtap="go" data-url="companyEdit">添加</button>
+  </view>
+</view>
