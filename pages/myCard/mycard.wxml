@@ -1,3 +1,4 @@
+<view class="bg" style="background: url({{bgUrl}}); height: 1520rpx;"></view>
 <view class=''>
 <!-- 个人简介 -->
   <view class='myMsg'>

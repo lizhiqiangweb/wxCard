@@ -1,12 +1,9 @@
 <view>
   <view class="xs">
-    <view class="xsItem">
-      <image src="../images/bg.jpg"></image>
-      <view bindtap="selectBg">设为封面</view>
+    <view class="xsItem" wx:for="{{xsItem}}" wx:for-item="item" wx:key="index">
+      <image src="{{item.imgUrl}}"></image>
+      <view bindtap="selectBg" data-url="{{index}}">{{item.name}}</view>
     </view>
-    <view class="xsItem">
-      <image src="../images/bg.jpg"></image>
-      <view>设为封面</view>
-    </view>
+
   </view>
 </view>

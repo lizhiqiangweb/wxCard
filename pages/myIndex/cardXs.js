@@ -5,13 +5,26 @@ Page({
    * 页面的初始数据
    */
   data: {
-    bgUrl: ''
+    bgUrl: '',
+    xsItem: [
+      {
+        name: '设为封面',
+        imgUrl: '../images/bg.jpg'
+      },
+      {
+        name: '设为封面',
+        imgUrl: '../images/bg1.jpg'
+      }
+    ]
   },
-  selectBg: function () {
-    var bgUrl = 
+  selectBg: function (res) {
+    var that = this;
+    var index = res.target.dataset.url;
+    var bgUrl = that.data.xsItem[index].imgUrl;
+    console.log(bgUrl);
     wx.setStorage({
       key: 'bgUrl',
-      data: '',
+      data: bgUrl,
     })
   },
 
