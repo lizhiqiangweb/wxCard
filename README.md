@@ -1,2 +1,2 @@
 # wxCard
-This is a wxCard
+微信小程序电子名片修改第二部
