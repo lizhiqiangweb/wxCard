@@ -1,3 +1,17 @@
+/* noCard内容 */
+.addCardBtn {
+  border-radius: 5px;
+  width: 80%;
+  height: 38px;
+  line-height: 38px;
+  background-color: #076cc4;
+  color: #fff;
+  margin: 12px auto 0;
+}
+.noCard {
+  background: #fff;
+  padding-bottom: 186rpx;
+}
 /* myMsg */
 .bg {
   width: 100%;
@@ -77,7 +91,7 @@
 }
 /* companyDis */
 .companyDis {
-  margin: 0 auto 24rpx;
+  margin: 24rpx auto 24rpx;
   background: #fff;
   border-radius: 8rpx;
   padding: 24rpx 22rpx 32rpx;

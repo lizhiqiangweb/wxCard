@@ -8,23 +8,64 @@ Page({
     contacts: [
       {
         imgUrl: '../images/headimg.jpg',
-        name: '陈芸熙',
-        post: '设计师',
-        company: '长沙腾庆网络科技有限公司'
+        name: '',
+        post: '',
+        company: ''
       }
-    ]
+    ],
+    name: '',
+    post: '',
+    company: ''
   },
   go: function(res) {
     var url = res.target.dataset.url;
     wx.navigateTo({
       url: url,
+    });
+    wx.request({
+      url: '',
+      data: {
+        id: ''
+      },
+      header: {
+
+      },
+      method: 'POST',
+      dataType: 'json',
+      responseType: 'text',
+      success: function(res) {
+        wx.navigateTo({
+          url: url,
+        })
+      },
+      fail: function(res) {},
+      complete: function(res) {},
     })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that = this;
+    wx.request({
+      url: 'http://120.27.61.214:8080/wxCard/getJson',
+      data: '',
+      header: {
+        'content-type': 'application/json'
+      },
+      method: 'GET',
+      dataType: 'json',
+      responseType: 'text',
+      success: function(res) {
+        that.setData({
+          name: res.data.rows[0].name,
+          post: res.data.rows[0].postd,
+          company: res.data.rows[0].company
+        })
+      },
+      fail: function(res) {},
+      complete: function(res) {},
+    })
   },
 
   /**

@@ -1,6 +1,10 @@
-<view class="bg" style="background: url({{bgUrl}}); height: 1520rpx;"></view>
-<view class=''>
-<!-- 个人简介 -->
+<view class='noCard' wx:if="{{noCard}}">
+  <image style='width: 100%; height: 872rpx;' src='../images/loading_img.png'></image>
+  <button data-url="newCard" form-type="submit" bindtap='go' class='center addCardBtn'>点击创建电子名片</button>
+</view>
+<view class="bg" style="background: url({{bgUrl}}); height: 1520rpx;" wx:if="{{card}}"></view>
+<view class='' wx:if="{{card}}">
+  <!-- 个人简介 -->
   <view class='myMsg'>
     <view class='msgTop'>
       <view class='cardAccess'>
@@ -13,34 +17,53 @@
         <view>被收藏次数</view>
       </view>
     </view>
-
     <view class='msgBottom'>
-      <view class='msgBottomName'>陈芸熙 |
-        <label>网页设计</label>
-        <text>123456789</text>
+      <view class='msgBottomName'>{{name}} |
+        <label>{{post}}</label>
+        <text>{{phone}}</text>
       </view>
-      <view class='msgBottomItem' wx:for="{{myMsg}}" wx:for-item='item' wx:key='index'>
-        <label>{{item.name}}</label><text>{{item.content}}</text>
+      <view class='msgBottomItem'>
+        <label>微信：</label>
+        <text>{{wxPhone}}</text>
+      </view>
+      <view class='msgBottomItem'>
+        <label>QQ：</label>
+        <text>{{qqPhone}}</text>
+      </view>
+      <view class='msgBottomItem'>
+        <label>邮箱：</label>
+        <text>{{email}}</text>
+      </view>
+      <view class='msgBottomItem'>
+        <label>公司：</label>
+        <text>{{company}}</text>
+      </view>
+      <view class='msgBottomItem'>
+        <label>地址：</label>
+        <text>{{address}}</text>
       </view>
       <view class='msgBtn'>
-        <label>编辑</label>
+        <label data-url="cardEdit" bindtap="go">编辑</label>
         <label>分享ta</label>
       </view>
-    </view>    
+    </view>
   </view>
   <view class='clear'></view>
   <!-- 公司简介 -->
-  <view class='companyDis'>
+  <view class='companyDis' wx:if="{{companyDis}}">
     <label class='tit'>公司简介：</label>
     <text class='companyContent'>{{companyDisContent}}</text>
   </view>
-
+  <!-- 公司案例 -->
+  <view class='companyDis' wx:if="{{companyCase}}">
+    <label class='tit'>公司案例：</label>
+    <text class='companyContent'>{{companyCaseContent}}</text>
+  </view>
   <!-- 相册 -->
-  <view class='companyDis album'>
+  <view class='companyDis album' wx:if="{{companyAlbum}}">
     <label class='tit'>相册：</label>
     <view class='imgItem'>
       <image wx:for='{{imgItem}}' wx:for-item="item" wx:key="index" src='{{item.imgUrl}}' class="{{item.imgUrl.index==3 ? 'height3' : 'height2'}}"></image>
     </view>
   </view>
-
 </view>

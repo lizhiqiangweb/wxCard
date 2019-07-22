@@ -1,8 +1,8 @@
 <view>
 <!-- item -->
-  <view class="companyItem" wx:for="{{companyItem}}" wx:for-item="item" wx:key="index" >
-    <image class="logo" src="{{item.logo}}"></image>
-    <text>{{item.name}}</text>
+  <view class="companyItem" wx:for="{{list_data}}" wx:for-item="item" wx:key="index" >
+    <image class="logo" src="../images/headimg.jpg"></image>
+    <text>{{item.companyName}}</text>
     <image src="../images/edit_icon.png" bindtap="go" data-url="companyEdit" class="edit"></image>
   </view>
 

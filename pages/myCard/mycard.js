@@ -7,26 +7,22 @@ Page({
   data: {
     access: 0,
     collections: 0,
-    myMsg: [
-      {
-        name: '微信：',
-        content: '123456789'
-      },
-      {
-        name: '邮箱：',
-        content: '152461352@qq.com'
-      },
-      {
-        name: '公司：',
-        content: '长沙网络科技有限公司'
-      },
-      {
-        name: '地址：',
-        content: '绿地中心'
-      }
-    ],
+    noCard: true,
+    card: false,
+    companyDis: false,
+    companyCase: false,
+    companyAlbum: false,
+    adress:'',
+    wxPhone: '',
+    qqPhone: '',
+    email: '',
+    company: '',
+    name: '',
+    post: '',
+    phone: '',
     headUrl: '../images/headimg.jpg',
-    companyDisContent: 'Longtai hinge over the years has always adhered to "quality of products in order to survive, credibility and development services" business purposes. Committed to providing you with high-quality products and quality services',
+    companyDisContent: '',
+    companyCaseContent: '',
     imgItem: [
       {
         imgUrl: '../images/headimg.jpg'
@@ -37,7 +33,18 @@ Page({
     ],
     bgUrl: ''
   },
+  go: function (res) {
+    var url = res.target.dataset.url;
+    wx.navigateTo({
+      url: url,
+      success: function () {
+        
+      },
+      fail: function () {
 
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -50,6 +57,59 @@ Page({
           bgUrl: res.data
         })
       },
+    });
+    wx.request({
+      url: 'http://120.27.61.214:8080/wxCard/getJson',
+      header: {
+        'content-type': 'application/json'
+      },
+      method: 'GET',
+      dataType: 'json',
+      responseType: 'text',
+      success: function(res) {
+        // console.log(res);
+        if(res.data!=null) {
+          that.setData({
+            noCard: false,
+            card: true,
+            name: res.data.rows[0].name,
+            post: res.data.rows[0].postd,
+            phone: res.data.rows[0].phone,
+            wxPhone: res.data.rows[0].wxPhone,
+            company: res.data.rows[0].company,
+            email: res.data.rows[0].email,
+            address: res.data.rows[0].adress,
+            qqPhone: res.data.rows[0].qqPhone,
+          })
+        }
+      },
+      fail: function(res) {},
+      complete: function(res) {},
+    });
+    wx.request({
+      url: 'http://120.27.61.214:8080/wxCard/getCompany',
+      header: {
+        'content-type': 'application/json'
+      },
+      method: 'GET',
+      dataType: 'json',
+      responseType: 'text',
+      success: function(res) {
+        if(res.data.rows[0].companyDis != null) {
+          that.setData({
+            companyDis: true,
+            companyDisContent: res.data.rows[0].companyDis
+          }) 
+        } 
+        if(res.data.rows[0].companyCase != null) {
+          that.setData({
+            companyCase: true,
+            companyCaseContent: res.data.rows[0].companyCase
+          })
+        }
+      },
+      fail: function(res) {},
+      complete: function(res) {},
     })
   },
 

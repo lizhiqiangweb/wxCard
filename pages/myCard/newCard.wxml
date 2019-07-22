@@ -1,0 +1,166 @@
+<view class='main'>
+  <!-- modal1 -->
+  <view wx:if="{{modal1}}" class='newsBox'>
+    <view class='news-item1'>
+      <view class='news-item11'>
+        <view class='name'>
+          <label>姓名</label>
+          <text>{{name}}</text>
+        </view>
+        <view class='news-item'>
+          <label>职务/部门</label>
+          <text>{{post}}</text>
+        </view>
+        <view class='news-item'>
+          <label>公司/单位</label>
+          <text>{{company}}</text>
+        </view>
+      </view>
+      <form bindtap='openImg'>
+        <image class='add_img' src='{{addImgUrl}}'></image>
+      </form>
+    </view>
+    <view class='news-item2'>
+      <view class='news-item'>
+        <image src='../../images/phone_icon.png'></image>
+        <label>手机号码</label>
+        <text>{{phone}}</text>
+      </view>
+      <view class='news-item'>
+        <image src='../../images/email_icon.png'></image>
+        <label>电子邮箱</label>
+        <text>{{email}}</text>
+      </view>
+      <view class='news-item'>
+        <image src='../../images/address_icon.png'></image>
+        <label>详细地址</label>
+        <text>{{address}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- modal2 -->
+  <view wx:if="{{modal2}}" class='newsBox'>
+    <view class='modal2-container'>
+      <form bindtap='openImg'>
+        <image class='add_img' src='{{addImgUrl}}'></image>
+      </form>
+      <view class='modal2-content'>
+        <view class='modal2-top'>
+          <view style='margin-bottom: 24rpx;' class='name'>
+            <label>姓名</label>
+            <text>{{name}}</text>
+          </view>
+          <view class='modal2-item'>
+            <label>职务/部门</label>
+            <text>{{post}}</text>
+          </view>
+          <view class='modal2-item'>
+            <label>公司/单位</label>
+            <text>{{company}}</text>
+          </view>
+        </view>
+        <view class='modal2-bottom'>
+          <view class='modal2-item'>
+            <label>
+              <image src='../../images/phone_icon.png'></image>手机号码</label>
+            <text>{{phone}}</text>
+          </view>
+          <view class='modal2-item'>
+            <label>
+              <image src='../../images/email_icon.png'></image>电子邮箱</label>
+            <text>{{email}}</text>
+          </view>
+          <view class='modal2-item'>
+            <label>
+              <image src='../../images/address_icon.png'></image>详细地址</label>
+            <text>{{address}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- modal3 -->
+  <view wx:if="{{modal3}}" class='newsBox'>
+    <view class='modal3-container'>
+      <form bindtap='openImg'>
+        <image class='modal3-addImg' src='{{addImgUrl}}'></image>
+      </form>
+      <view class='modal3-top'>
+        <view style='margin-bottom: 24rpx;' class='name'>
+          <label>姓名</label>
+          <text>{{name}}</text>
+        </view>
+        <view class='modal2-item modal3-item'>
+          <label>职务/部门</label>
+          <text>{{post}}</text>
+        </view>
+        <view class='modal2-item modal3-item'>
+          <label>公司/单位</label>
+          <text>{{company}}</text>
+        </view>
+      </view>
+      <view class='modal3-bottom'>
+        <view class='modal2-item modal3-item'>
+          <label>
+            <image src='../../images/phone_icon.png'></image>手机号码</label>
+          <text>{{phone}}</text>
+        </view>
+        <view class='modal2-item modal3-item'>
+          <label>
+            <image src='../../images/email_icon.png'></image>电子邮箱</label>
+          <text>{{email}}</text>
+        </view>
+        <view class='modal2-item modal3-item'>
+          <label>
+            <image src='../../images/address_icon.png'></image>详细地址</label>
+          <text>{{address}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+<!-- newsBox -->
+  <view class='newsBox1'>
+    <view class='newsBox1-content'>
+      <form class='modalNews' bindsubmit='submit'>
+        <view class='News'>
+          <view class='NewsRow'>
+            <label>姓名</label>
+            <input name="name" bind:change="changeName" maxlength='6' value="{{name}}" placeholder='请填写姓名' placeholder-style='color:red' />
+          </view>
+          <view class='NewsRow'>
+            <label>职务/部门</label>
+            <input name="post" bind:change="changePost" value='{{ post }}' placeholder='请填写职务/部门名称' placeholder-style='color:red'></input>
+          </view>
+          <view class='NewsRow'>
+            <label>公司/单位</label>
+            <input name="company" bind:change="changeCompany" value='{{ company }}' placeholder='请填写公司/单位名称' placeholder-style='color:red'></input>
+          </view>
+          <view class='NewsRow'>
+            <label>手机号码</label>
+            <input name='phone' bind:change="changePhone" value='{{phone}}' placeholder='请填写手机号码' placeholder-style='color:red'></input>
+          </view>
+        </view>
+        <view class='News'>
+          <view class='NewsRow'>
+            <label>电子邮箱</label>
+            <input name='email' bind:change="changeEmail" value='{{email}}' placeholder='请填写电子邮箱'></input>
+          </view>
+          <view class='NewsRow'>
+            <label>详细地址</label>
+            <input name='address' bind:change="changeAddress" value='{{address}}' placeholder='请填写详细地址'></input>
+          </view>
+          <view class='NewsRow'>
+            <label>微信号码</label>
+            <input name='wxPhone' bind:change="" value='{{wxPhone}}' placeholder='请填写微信号码'></input>
+          </view>
+          <view class='NewsRow'>
+            <label>QQ号码</label>
+            <input name='qqPhone' bind:change="" value='{{qqPhone}}' placeholder='请填写QQ号码'></input>
+          </view>
+        </view>
+        <button form-type='submit' class='submitBtn'>保存</button>
+      </form>
+    </view>
+  </view>
+</view>

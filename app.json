@@ -10,7 +10,10 @@
     "pages/company/newAlbum",
     "pages/company/ckAlbum",
     "pages/myIndex/flow",
-    "pages/myIndex/cardXs"
+    "pages/myIndex/cardXs",
+    "pages/myCard/newCard",
+    "pages/myCard/cardEdit",
+    "pages/myCard/myCompany"
   ],
   "window": {
     "backgroundTextStyle": "light",

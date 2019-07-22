@@ -19,7 +19,7 @@ Page({
     companyCase: '',
     companyDis: '',
   },
-  
+
   // 监听公司介绍文字长度
   textareaCount: function (e) {
     var textareaCount = e.detail.value.length;
@@ -76,7 +76,7 @@ Page({
   // 选择图片
   chooseImages: function () {
     var that = this,
-    pics = that.data.pics;
+      pics = that.data.pics;
     wx.chooseImage({
       count: 9 - pics.length, // 最多可以选择的图片张数，默认9
       sizeType: ['original', 'compressed'], // original 原图，compressed 压缩图，默认二者都有
@@ -143,7 +143,7 @@ Page({
       method: 'GET',
       dataType: 'json',
       responseType: 'text',
-      success: function(res) {
+      success: function (res) {
         console.log(res);
         that.setData({
           companyCase: res.data.rows[0].companyCase,
@@ -152,8 +152,8 @@ Page({
           companyDis: res.data.rows[0].companyDis
         })
       },
-      fail: function(res) {},
-      complete: function(res) {},
+      fail: function (res) { },
+      complete: function (res) { },
     })
   },
   submit: function (e) {
@@ -176,7 +176,7 @@ Page({
       responseType: 'text',
       success: function (res) {
         wx.switchTab({
-          url: '../myCard/mycard',
+          url: 'mycard',
         })
       },
       fail: function (res) { },

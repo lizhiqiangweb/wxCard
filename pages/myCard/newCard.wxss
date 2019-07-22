@@ -1,0 +1,215 @@
+input {
+  width: 72%;
+  height: 28px;
+  line-height: 28px;
+  border: 1px #ddd solid;
+  border-radius: 5px;
+}
+.main {
+  background: #efefef;
+  padding: 46rpx 0 1rpx 0;
+}
+.newsBox {
+  width: 78%;
+  height: auto;
+  margin: 0 auto 40rpx;
+  border-radius: 10px;
+  outline: none;
+  background: #fff;
+  padding: 46rpx 46rpx 0 46rpx;
+  box-shadow: 5px 5px 10px #ddd;
+}
+.newsBox1 {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  border-radius: 10px;
+  padding-top: 36rpx;
+  padding-bottom: 18rpx;
+}
+.newsBox1-content {
+  width: 90%;
+  margin: 0 auto;
+}
+.name {
+  font-size: 16px !important;
+  color: #333;
+  font-weight: 600;
+}
+.news-item {
+  font-size: 14px;
+  color: #666;
+  margin-top: 18rpx;
+}
+.news-item text {
+  font-size: 12px;
+}
+.news-item image {
+  width: 22rpx;
+  height: 26rpx;
+  margin-right: 10rpx;
+}
+.news-item1 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.news-item11 {
+  width: 445rpx;
+}
+.news-item11 label {
+  width: 196rpx;
+  display: inline-block;
+}
+.news-item11 text {
+  font-size: 12px;
+  width: 216rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+  overflow: inherit;
+  display: inline-block;
+}
+.add_img {
+  width: 140rpx;
+  height: 140rpx;
+}
+.news-item2 {
+  margin: 34rpx 0 0 0;
+  padding-bottom: 46rpx;
+  position: relative;
+}
+.news-item2 image {
+  width: 4%;
+  height: 26rpx;
+  margin-right: 10rpx;
+}
+.news-item2 label {
+  position: relative;
+  top: -1rpx;
+  margin-right: 48rpx;
+}
+.modal {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 24rpx;
+}
+.modal image {
+  width: 210rpx;
+  height: 146rpx;
+  margin: 0 6rpx;
+}
+.News {
+  border: 2px #1c6aa8 solid; 
+  border-radius: 10rpx;
+  margin: 42rpx 0 0 0;
+  padding-bottom: 24rpx;
+}
+.News view:first-child {
+  margin-top: 5%;
+}
+.News view {
+  display: flex;
+  margin: 0 4% 2%;
+}
+.modalNews view label {
+  width: 32%;
+  height: 54rpx;
+  line-height: 54rpx;
+}
+.NewsRow {
+  border-bottom: 1rpx #ddd solid;
+  padding-bottom: 8rpx;
+  position: relative;
+}
+.NewsRow label {
+  font-size: 14px;
+}
+.NewsRow input {
+  border: none;
+  padding-left: 26rpx;
+  font-size: 12px;
+  color: #333;
+}
+.submitBtn {
+  width: 80%;
+  height: 76rpx;
+  line-height: 76rpx;
+  border-radius: 5px;
+  background-color: #086cc4;
+  border: none;
+  color: #fff;
+  position: relative;
+  top: -18rpx;
+}
+.active {
+  border: 1px solid #086cc4;
+}
+
+/* modal2 */
+.modal2-content {
+  margin: 0 0 0 24rpx;
+  width: 445rpx;
+}
+.modal2-item {
+  display: flex;
+  margin: 0 0 24rpx 0;
+}
+.modal2-item label {
+  font-size: 14px;
+  color: #333;
+  width: 196rpx;
+}
+.modal2-top text {
+  font-size: 12px;
+  color: #666;
+}
+.modal2-item text {
+  font-size: 12px;
+  color: #666;
+  line-height: 21px;
+}
+.modal2-item image {
+  width: 22rpx;
+  height: 26rpx;
+  margin-right: 6rpx;
+  position: relative;
+  top: 3px;
+}
+.modal2-container {
+  display: flex;
+}
+.modal2-bottom {
+  padding-bottom: 18rpx;
+}
+.modal2-bottom label {
+  margin-right: -2rpx;
+}
+.modal2-top .name label {
+  margin: 0 128rpx 0 0;
+}
+.modal2-top .name text {
+  color: #333;
+}
+
+/* modal3 */
+.modal3-addImg {
+  border-radius: 50%;
+  width: 140rpx;
+  height: 140rpx;
+}
+.modal3-container {
+  text-align: center;
+}
+.modal3-item {
+  justify-content: center;
+}
+.modal3-bottom {
+  padding-bottom: 18rpx;
+}
+.modal3-item image {
+  top: 3rpx;
+}
+.modal3-top .name text {
+  font-size: 14px;
+  margin: 0 0 0 24rpx;
+}

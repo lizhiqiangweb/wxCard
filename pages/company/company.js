@@ -7,10 +7,11 @@ Page({
   data: {
     companyItem: [
       {
-        logo: '../images/headimg.jpg',
-        name: '长沙腾庆网络科技有限公司'
+        logo: '',
+        name: ''
       }
-    ]
+    ],
+    list_data: []
   },
   go: function(res) {
     var url = res.target.dataset.url;
@@ -22,7 +23,24 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that = this;
+    wx.request({
+      url: 'http://120.27.61.214:8080/wxCard/getCompany',
+      header: {
+        'content-type': 'application/json'
+      },
+      method: 'GET',
+      dataType: 'json',
+      responseType: 'text',
+      success: function(res) {
+        that.setData({
+          list_data : res.data.rows
+        })
+        console.log(res)
+      },
+      fail: function(res) {},
+      complete: function(res) {},
+    })
   },
 
   /**

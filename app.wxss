@@ -1,6 +1,6 @@
 /**app.wxss**/
 page {
-  background: rgba(244, 244, 244, .6);
+  background: rgba(230, 230, 230, .6);
 }
 .container {
   width: 90%;
