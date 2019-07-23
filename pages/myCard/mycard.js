@@ -68,7 +68,7 @@ Page({
       responseType: 'text',
       success: function(res) {
         // console.log(res);
-        if(res.data!=null) {
+        if(res.data!='') {
           that.setData({
             noCard: false,
             card: true,
@@ -124,7 +124,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    
   },
 
   /**

@@ -79,7 +79,26 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    var that = this;
+    wx.request({
+      url: 'http://120.27.61.214:8080/wxCard/getJson',
+      data: '',
+      header: {
+        'content-type': 'application/json'
+      },
+      method: 'GET',
+      dataType: 'json',
+      responseType: 'text',
+      success: function (res) {
+        if (res.data = '') {
+          wx.switchTab({
+            url: '../myCard/mycard',
+          })
+        };
+      },
+      fail: function (res) { },
+      complete: function (res) { },
+    })
   },
 
   /**

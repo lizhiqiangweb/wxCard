@@ -99,6 +99,7 @@ Page({
           wx.switchTab({
             url: 'mycard',
           })
+          that.onReady();
         },
         fail: function (res) {
           console.log(res)
