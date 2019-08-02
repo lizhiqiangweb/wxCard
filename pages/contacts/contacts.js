@@ -15,7 +15,7 @@ Page({
     ],
     name: '',
     post: '',
-    company: ''
+    company: '',
   },
   go: function(res) {
     var url = res.target.dataset.url;
@@ -46,33 +46,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this;
-    wx.request({
-      url: 'http://120.27.61.214:8080/wxCard/getJson',
-      data: '',
-      header: {
-        'content-type': 'application/json'
-      },
-      method: 'GET',
-      dataType: 'json',
-      responseType: 'text',
-      success: function(res) {
-        that.setData({
-          name: res.data.rows[0].name,
-          post: res.data.rows[0].postd,
-          company: res.data.rows[0].company
-        })
-      },
-      fail: function(res) {},
-      complete: function(res) {},
-    })
+
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    
   },
 
   /**
@@ -81,7 +62,7 @@ Page({
   onShow: function () {
     var that = this;
     wx.request({
-      url: 'http://120.27.61.214:8080/wxCard/getJson',
+      url: 'https://www.tq-cs.com/wxCard/getJson',
       data: '',
       header: {
         'content-type': 'application/json'
@@ -90,11 +71,29 @@ Page({
       dataType: 'json',
       responseType: 'text',
       success: function (res) {
-        if (res.data = '') {
-          wx.switchTab({
-            url: '../myCard/mycard',
+        if (res.data.rows == '') {
+          wx.showModal({
+            title: '温馨提示',
+            content: '请您先进行电子名片创建!',
+            showCancel: true,
+            cancelText: '取消',
+            cancelColor: '#000',
+            confirmText: '确定',
+            confirmColor: '#000',
+            success: function (res) {
+              wx.switchTab({
+                url: '../myCard/mycard',
+              })
+            },
+            fail: function (res) { },
+            complete: function (res) { },
           })
-        };
+        }
+        that.setData({
+          name: res.data.rows[0].name,
+          post: res.data.rows[0].postd,
+          company: res.data.rows[0].company,
+        })
       },
       fail: function (res) { },
       complete: function (res) { },

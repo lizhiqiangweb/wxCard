@@ -58,17 +58,32 @@ Page({
         })
       },
     });
+    
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+    var that = this;
     wx.request({
-      url: 'http://120.27.61.214:8080/wxCard/getJson',
+      url: 'https://www.tq-cs.com/wxCard/getJson',
       header: {
         'content-type': 'application/json'
       },
       method: 'GET',
       dataType: 'json',
       responseType: 'text',
-      success: function(res) {
+      success: function (res) {
         // console.log(res);
-        if(res.data!='') {
+        if (res.data.rows[0].name != null) {
           that.setData({
             noCard: false,
             card: true,
@@ -83,48 +98,34 @@ Page({
           })
         }
       },
-      fail: function(res) {},
-      complete: function(res) {},
+      fail: function (res) { },
+      complete: function (res) { },
     });
     wx.request({
-      url: 'http://120.27.61.214:8080/wxCard/getCompany',
+      url: 'https://www.tq-cs.com/wxCard/getCompany',
       header: {
         'content-type': 'application/json'
       },
       method: 'GET',
       dataType: 'json',
       responseType: 'text',
-      success: function(res) {
-        if(res.data.rows[0].companyDis != null) {
+      success: function (res) {
+        if (res.data.rows[0].companyDis != null) {
           that.setData({
             companyDis: true,
             companyDisContent: res.data.rows[0].companyDis
-          }) 
-        } 
-        if(res.data.rows[0].companyCase != null) {
+          })
+        }
+        if (res.data.rows[0].companyCase != null) {
           that.setData({
             companyCase: true,
             companyCaseContent: res.data.rows[0].companyCase
           })
         }
       },
-      fail: function(res) {},
-      complete: function(res) {},
+      fail: function (res) { },
+      complete: function (res) { },
     })
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-    
   },
 
   /**

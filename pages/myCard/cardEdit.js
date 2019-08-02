@@ -80,7 +80,7 @@ Page({
   onLoad: function (res) {
     var that = this;
     wx.request({
-      url: 'http://120.27.61.214:8080/wxCard/getJson',
+      url: 'https://www.tq-cs.com/wxCard/getJson',
       data: 'GET',
       header: {
         'content-type': 'application/json'
@@ -111,7 +111,7 @@ Page({
     // console.log(obj);
     if (obj.name && obj.post && obj.company && obj.phone) { //判断表单是否有数据
       wx.request({
-        url: 'http://120.27.61.214:8080/wxCard/setJson',
+        url: 'https://www.tq-cs.com/wxCard/getJson',
         method: 'POST',
         dataType: 'json',
         data: {

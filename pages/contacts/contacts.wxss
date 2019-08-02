@@ -1,5 +1,20 @@
 /* pages/contacts/contacts.wxss */
+/* noCard内容 */
+.addCardBtn {
+  border-radius: 5px;
+  width: 80%;
+  height: 38px;
+  line-height: 38px;
+  background-color: #076cc4;
+  color: #fff;
+  margin: 12px auto 0;
+}
+.noCard {
+  background: #fff;
+  padding-bottom: 326rpx;
+}
 
+/*  */
 .contact-item {
   display: flex;
   background: #fff;

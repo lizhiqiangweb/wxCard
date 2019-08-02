@@ -25,7 +25,7 @@ Page({
   onLoad: function (options) {
     var that = this;
     wx.request({
-      url: 'http://120.27.61.214:8080/wxCard/getCompany',
+      url: 'https://www.tq-cs.com/wxCard/getCompany',
       header: {
         'content-type': 'application/json'
       },

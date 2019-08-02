@@ -4,7 +4,9 @@
       <image data-url="../cardBox/index" bindtap="go" src='{{item.imgUrl}}'></image>
     </view>
     <view class='contact-right'>
-      <view data-url="../cardBox/index" bindtap="go">{{name}} | <text>{{post}}</text></view>
+      <view data-url="../cardBox/index" bindtap="go">{{name}} |
+        <text>{{post}}</text>
+      </view>
       <view class='company' data-url="../cardBox/index" bindtap="go">{{company}}</view>
     </view>
   </view>
